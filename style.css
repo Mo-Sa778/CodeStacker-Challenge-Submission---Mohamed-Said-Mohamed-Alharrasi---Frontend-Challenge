@@ -1,0 +1,284 @@
+header {
+  background: linear-gradient(to bottom, #642e28, #FFD700); /* Background color */
+  color: white; /* Text color */
+  padding: 20px; /* Padding around the title */
+  text-align: center; /* Center-align the text */
+}
+
+header > h1 {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  width: 50%; /* Reduce the width of the h1 */
+  margin: 0 auto; /* Center the h1 horizontally */
+  border: 2px solid white; /* Add borders */
+  border-radius: 10px; /* Add border radius */
+  padding: 10px; /* Add padding */
+  background-color: #ebe3a0;
+}
+
+ 
+ body{
+background-color: #FFD700;
+}
+
+.pokeCardsContainer{
+    position: relative;
+    width: 100;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.pokemonCard{
+    background-color: #FFF9C4;
+    position: relative;
+    flex: 1 0 calc(25% - 10px); /* Set flex-basis to 25% minus any margin/padding */
+    margin: 5px; /* Add some margin between items */
+    padding: 20px;
+    flex-shrink: 1;
+    border-radius: 20px 20px 15px 15px;
+    width: 100px;
+    height: 300px;
+    transition: background-color 0.3s;
+    border: 1px solid #17132a;
+    text-align: center;
+}
+
+.pokemonCard:hover{
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+    background-color: #f3ecac;
+    border: 1px solid #17132a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.pokemonCard li{
+  display: none;
+}
+
+.pokemonCard:hover li{
+  display: contents;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s;
+
+}
+
+.pokemonCard h1{
+  border-bottom: 2px solid black; /* Adjust the color and thickness as needed */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.pokemonCard:hover h1{
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin: 0px 60px 0px 60px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 10px 10px 10px 10px;
+  border: 1px solid;
+  transition: 0.5s;
+}
+
+.indexContainer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    background-color: #642e28;
+    color: antiquewhite;
+    padding: 10px;
+    border-radius: 2px 12px 2px 2px;
+    text-align: center;
+    font-size: 90%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.page.sidebar-2-page {
+    background: #17132a;
+  }
+  
+  .sidebar-2 {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 1700px;
+    background: #6d2222;
+    transition: width 0.4s;
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .sidebar-2.open {
+    width: 260px;
+    border: 1px solid #17132a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar-2 .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+  }
+  
+  .sidebar-2 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 6px;
+    background: rgb(0 0 0 / 25%);
+  }
+
+  .sidebar-2 header > p{
+    margin-right: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: azure;
+  }
+  
+  .sidebar-2-burger {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    color: #0d0000;
+    border-radius: 8px;
+  }
+  
+  .sidebar-2 header > img {
+    height: 28px;
+  }
+  
+  .sidebar-2 nav {
+    display: grid;
+    padding: 6px;
+    gap: 2px;
+  }
+  
+  .sidebar-2 nav > button {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-family: "Poppins";
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: 1;
+    text-align: center;
+    border-radius: 8px;
+    color: #2d0202;
+    
+  }
+  
+  .sidebar-2 nav > button:hover {
+    background: rgb(0 0 0 / 30%);
+    color: #999999;
+  }
+  
+  .sidebar-2 header > img,
+  .sidebar-2 nav > button p {
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  .sidebar-2.open :is(nav button p, header > img) {
+    opacity: 1;
+  }
+  
+  .sidebar-2.open nav > button {
+    width: 100%;
+  }
+
+  .content{
+    margin-left: 44px;
+  }
+
+  .material-symbols-outlined{
+    font-size: large;
+    font-weight: bold;
+    font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+  }
+
+  .nextPrev{
+    text-align: right;
+    padding: 0;
+  }
+
+  .pagesDropdown{
+    margin-top: 5px;
+    left: 0;
+  }
+  
+  .nextPrevButtons button{
+    background-color: #6d2222; /* Blue color */
+    color: black; /* White text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    width: 100px;
+  }
+
+  .nextPrevButtons button:hover{
+    background-color: #4a1919; /* Darker blue color on hover */
+    color: #cccccc;
+  }
+
+  /* Basic select styling */
+select {
+    appearance: none; /* Remove default appearance */
+    background-color: #ffffff; /* White background color */
+    color: #333333; /* Text color */
+    padding: 10px; /* Padding inside the select */
+    border: 1px solid #cccccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    outline: none; /* Remove outline */
+    width: 80px;
+  }
+  
+  /* Hover effect */
+  select:hover {
+    border-color: #999999; /* Darker border color on hover */
+  }
+  
+  /* Focus effect */
+  select:focus {
+    border-color: #0d0000; /* Focus border color */
+    box-shadow: 0 0 5px rgba(79, 195, 247, 0.5); /* Box shadow on focus */
+  }
+
+  .typeAndAbilities{
+    box-shadow: 0 0 5px rgba(109, 34, 34, 0.5);
+    border-radius: 5px; /* Rounded corners */
+    padding-top: 5px;
+    
+  }
+
+  .types li{
+   list-style-type: none;
+   font-family: "Crimson Text", serif;
+   font-weight: 400;
+   font-style: normal;
+  }
+ 
+
+  
+  .abilities li {
+    list-style-type: none;
+    font-family: "Tac One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+
+  .abilities li > p {
+    color: #6d2222;
+  }
+
+  .abilities li > img{
+    filter: hue-rotate(70deg);
+  }
+
